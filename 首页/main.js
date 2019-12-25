@@ -147,7 +147,7 @@ function list_change(){
                 img3.style.opacity = op;
             }   
         }      
-    }, 60);
+    }, 80);
 }
 list1.onclick = list_change;    
 list2.onclick = list_change;
