@@ -1,0 +1,475 @@
+@font-face {
+    font-family: 'TencentSans-W7';
+    /*字体名称*/
+    src: url('fontC/TencentSans-W7.woff');
+    /*字体源文件*/
+    font-family: 'JIA';
+    /*字体名称*/
+    src: url('fontC/JIA.ttf');
+    /*字体源文件*/
+    font-family: 'TencentSans-W3';
+    /*字体名称*/
+    src: url('fontC/TencentSans-W3.woff');
+    /*字体源文件*/
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul,
+ol,
+li,
+a {
+    list-style: none;
+}
+
+a,
+h3 {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/*页头区域*/
+
+.header_wrap {
+    width: 100%;
+    height: 72px;
+}
+
+.header {
+    width: 100%;
+    height: 72px;
+    display: block;
+    position: fixed;
+    top: 0px;
+    background-color: rgb(251, 251, 251);
+    z-index: 10;
+}
+
+.nav {
+    width: 1200px;
+    height: 72px;
+    display: block;
+    margin: 0px auto;
+    position: relative;
+}
+
+.logo {
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    height: 22px;
+    width: 200px;
+    position: absolute;
+    left: 0px;
+    top: 15px;
+    font-family: "Microsoft YaHei";
+}
+
+.menu_list {
+    height: 72px;
+    display: block;
+    position: fixed;
+    right: 220px;
+    top: 0px;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.menu_list .menu_item {
+    height: 72px;
+    display: inline-block;
+    margin-left: 72px;
+    position: relative;
+}
+
+.txt {
+    display: block;
+    height: 70px;
+    line-height: 72px;
+    font-size: 17px;
+    color: #2b2e2e;
+    font-weight: bold;
+    opacity: 0.95;
+    position: relative;
+    z-index: 2;
+}
+
+.sub_list {
+    display: none;
+    position: absolute;
+    left: 50%;
+    width: 160px;
+    margin-left: -80px;
+    text-align: center;
+    z-index: 2;
+    background: #fff;
+}
+
+.sub_list li a {
+    display: block;
+    font-size: 16px;
+    color: #2b2e2e;
+    opacity: 0.7;
+    padding: 13px 0;
+}
+
+.sub_list li a:hover {
+    color: #000;
+    opacity: 1.25;
+    font-weight: 545;
+}
+
+.menu_list>li:hover .sub_list {
+    display: block;
+}
+
+.menu_list>li:hover .txt {
+    border-bottom: 2px solid rgb(47, 0, 255);
+}
+
+
+/*主体区域*/
+
+.main_wrap {
+    width: 100%;
+    height: 1200px;
+}
+
+.main_banner {
+    width: 100%;
+    height: 478px;
+}
+
+.main_content {
+    width: 1200px;
+    height: 1200px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+
+/*主体区域-标签切换*/
+
+.main_tab {
+    width: 1200px;
+    height: 600px;
+    text-align: center;
+    margin: 30px auto;
+    z-index: -5;
+}
+
+.tab_list {
+    width: 1200px;
+    height: 68px;
+    margin: 0px auto;
+    background-color: #fff;
+    display: table;
+    border-bottom: 1px solid #f4f4f4;
+    transform: translateY(0);
+    z-index: -5;
+}
+
+.tab_list li {
+    width: 100px;
+    height: 30px;
+    float: left;
+    font-size: 20px;
+    line-height: 36px;
+    color: #5F6464;
+    cursor: pointer;
+    margin-right: 60px;
+    z-index: 5;
+}
+
+.tab_list li a {
+    padding: 16px 0;
+    display: block;
+    font-size: 20px;
+    line-height: 36px;
+    color: #5F6464;
+}
+
+.tab_list li:hover {
+    color: #000;
+    opacity: 1.25;
+    font-weight: 545;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.content {
+    display: inline-block;
+    margin: -120px auto;
+}
+
+
+/*主体区域-个人规划*/
+
+.wrap {
+    width: 280px;
+    height: 280px;
+    position: relative;
+    margin-top: 300px;
+    margin-left: 0px;
+    transform-style: preserve-3d;
+    transform: rotateX(45deg) rotateY(45deg);
+    float: left;
+}
+
+.nameList {
+    position: absolute;
+    top: 1000px;
+    left: 750px;
+    font-size: 0px;
+    object-fit: cover;
+    cursor: pointer;
+    font-family: 'TencentSans-W7';
+    color: #5f6464;
+}
+
+.wrap>.box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    line-height: 200px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background: red;
+    opacity: 0.5;
+    font-size: 50px;
+    transition: 1s;
+    box-shadow: 0px 0px 100px #FFFF66;
+}
+
+.wrap>.box:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.wrap>.box:nth-child(2) {
+    transition-delay: 1s;
+}
+
+.wrap>.box:nth-child(3) {
+    transition-delay: 2s;
+}
+
+.wrap>.box:nth-child(4) {
+    transition-delay: 3s;
+}
+
+.wrap>.box:nth-child(5) {
+    transition-delay: 4s;
+}
+
+.wrap>.box:nth-child(6) {
+    transition-delay: 5s;
+}
+
+.wrap .box:nth-child(1) {
+    transform: rotateX(90deg) translateZ(140px);
+}
+
+.wrap .box:nth-child(2) {
+    transform: rotateX(90deg) translateZ(-140px);
+}
+
+.wrap .box:nth-child(3) {
+    transform: rotateY(90deg) translateZ(-140px);
+}
+
+.wrap .box:nth-child(4) {
+    transform: rotateY(90deg) translateZ(140px);
+}
+
+.wrap .box:nth-child(5) {
+    transform: translateZ(140px);
+}
+
+.wrap .box:nth-child(6) {
+    transform: translateZ(-140px);
+}
+
+.wrap:hover {
+    transform: rotateX(3600deg) rotateY(3600deg);
+    transition: 80s 1s;
+    animation-play-state: paused;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* 主体区域-辰悦计划 */
+
+.label-box h3 {
+    font-size: 34px;
+    font-weight: 500;
+    font-family: 'JIA';
+}
+
+.desc-box p {
+    line-height: 22px;
+    font-size: 16px;
+    font-family: 'TencentSansw7';
+}
+
+.t-flx {
+    margin-top: 122px;
+    position: relative;
+}
+
+.b-flx {
+    position: relative;
+    overflow: hidden;
+    margin: 0px auto;
+}
+
+.shandow {
+    display: none;
+    opacity: 0.8;
+    width: 1000px;
+    height: 350px;
+    background-color: lightblue;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    text-align: center;
+    line-height: 350px;
+    font-family: 'TencentSans-W7';
+    font-size: 36px;
+}
+
+.b-flx:hover .shandow {
+    display: block;
+}
+
+.silde_list {
+    opacity: 0;
+    position: relative;
+    top: -300px;
+    left: -100px;
+    float: left;
+}
+
+.silde {
+    font-family: 'TencentSans-W7';
+    font-size: 23px;
+    margin-left: 20px;
+    margin-bottom: 36px;
+}
+
+
+/*页脚区域*/
+
+.footer_wrap {
+    width: 100%;
+    height: 480px;
+    background-color: rgb(251, 251, 251);
+    bottom: 0px;
+    z-index: 1;
+}
+
+.footer_con {
+    width: 1200px;
+    height: 480px;
+    margin: 0px auto;
+    position: relative;
+}
+
+.banner {
+    display: block;
+    width: 100%;
+    height: 55px;
+    border-bottom: 1px solid #f2f3f5;
+    padding-top: 33px;
+    margin-bottom: 40px;
+}
+
+.banner_list li {
+    display: inline-block;
+    margin-right: 28px;
+}
+
+.banner_list li a {
+    display: block;
+    height: 28px;
+    width: 28px;
+}
+
+.banner_list img {
+    border: 0;
+    vertical-align: bottom;
+}
+
+.banner .tit {
+    float: left;
+    margin-right: 33px;
+    display: block;
+    font-size: 20px;
+    color: #5f6464;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.focus_us,
+.join_us,
+.contact_us {
+    float: left;
+    width: 250px;
+}
+
+.footer_con .tit {
+    display: block;
+    font-size: 20px;
+    color: #5f6464;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+i {
+    font-style: italic;
+}
+
+.footer_con ul li a {
+    display: block;
+    font-size: 16px;
+    color: #5f6464;
+    font-weight: normal;
+    margin-bottom: 18px;
+}
+
+.footer_area {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 51px;
+    left: 0px;
+}
+
+.footer_area .links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer_area .links li a {
+    font-size: 14px;
+    color: #5f6464;
+    margin-bottom: 0px;
+}
+
+.copyright {
+    font-size: 14px;
+    color: #5f6464;
+    float: right;
+}
