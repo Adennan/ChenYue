@@ -1,0 +1,550 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>员工</title>
+    <script src="js/modernizr.custom.js"></script>
+    <link rel="stylesheet" type="text/css" href="header_footer.css" />
+
+
+    <style type="text/css">
+        /* 通用样式 */
+        
+        *,
+        *:after,
+        *:before {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        body,
+        html {
+            font-size: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        
+        body {
+            font-family: 'Lato', Calibri, Arial, sans-serif;
+            color: #b3b9bf;
+            background: #fff;
+        }
+        
+        a {
+            color: #888;
+            text-decoration: none;
+        }
+        
+        a:hover,
+        a:active {
+            color: #333;
+        }
+        
+        .grid {
+            padding: 20px 20px 100px 20px;
+            max-width: 1300px;
+            margin: 0 auto;
+            list-style: none;
+            text-align: center;
+        }
+        
+        .grid li {
+            display: inline-block;
+            width: 440px;
+            margin: 0;
+            padding: 20px;
+            text-align: left;
+            position: relative;
+        }
+        
+        .grid figure {
+            margin: 0;
+            position: relative;
+        }
+        
+        .grid figure img {
+            max-width: 100%;
+            display: block;
+            position: relative;
+        }
+        
+        .grid figcaption {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 20px;
+            background: #2c3f52;
+            color: #ed4e6e;
+            line-height: 30px;
+        }
+        
+        .grid figcaption p {
+            text-indent: 2em;
+        }
+        
+        .grid figcaption h3 {
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            line-height: 40px;
+            text-align: center;
+        }
+        
+        .grid figcaption span:before {
+            content: 'by ';
+        }
+        
+        .grid figcaption a {
+            text-align: center;
+            padding: 5px 10px;
+            border-radius: 2px;
+            display: inline-block;
+            background: #ed4e6e;
+            color: #fff;
+        }
+        /* 说明文字样式 4 */
+        
+        .cs-style-4 li {
+            -webkit-perspective: 1700px;
+            -moz-perspective: 1700px;
+            perspective: 1700px;
+            -webkit-perspective-origin: 0 50%;
+            -moz-perspective-origin: 0 50%;
+            perspective-origin: 0 50%;
+        }
+        
+        .cs-style-4 figure {
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+        
+        .cs-style-4 figure>div {
+            overflow: hidden;
+        }
+        
+        .cs-style-4 figure img {
+            -webkit-transition: -webkit-transform 0.4s;
+            -moz-transition: -moz-transform 0.4s;
+            transition: transform 0.4s;
+        }
+        
+        .no-touch .cs-style-4 figure:hover img,
+        .cs-style-4 figure.cs-hover img {
+            -webkit-transform: translateX(25%);
+            -moz-transform: translateX(25%);
+            -ms-transform: translateX(25%);
+            transform: translateX(25%);
+        }
+        
+        .cs-style-4 figcaption {
+            height: 100%;
+            width: 50%;
+            opacity: 0;
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-transform-origin: 0 0;
+            -moz-transform-origin: 0 0;
+            transform-origin: 0 0;
+            -webkit-transform: rotateY(-90deg);
+            -moz-transform: rotateY(-90deg);
+            transform: rotateY(-90deg);
+            -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+            -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+            transition: transform 0.4s, opacity 0.1s 0.3s;
+        }
+        
+        .no-touch .cs-style-4 figure:hover figcaption,
+        .cs-style-4 figure.cs-hover figcaption {
+            opacity: 1;
+            -webkit-transform: rotateY(0deg);
+            -moz-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+            -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+            -moz-transition: -moz-transform 0.4s, opacity 0.1s;
+            transition: transform 0.4s, opacity 0.1s;
+        }
+        
+        .cs-style-4 figcaption a {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+        
+        .box {
+            position: relative;
+            width: 1521px;
+            height: 2100px;
+        }
+        
+        .div1 {
+            position: absolute;
+            width: 1521px;
+            height: 20px;
+            top: 20px;
+            text-align: center;
+            color: green;
+        }
+        
+        .div2 {
+            position: relative;
+            width: 1521px;
+            height: 900px;
+            top: 90px;
+            background-image: url('images/heidong.jpg');
+            background-size: 100% 100%;
+            left: 0;
+        }
+        
+        .row1 {
+            position: absolute;
+            width: 1521px;
+            height: 400px;
+            top: 100px;
+            left: 0;
+        }
+        
+        .row2 {
+            position: absolute;
+            width: 1521px;
+            height: 400px;
+            top: 500px;
+            left: 0;
+        }
+        
+        .div3 {
+            position: absolute;
+            top: 1060px;
+            height: 40px;
+            width: 1521px;
+            text-align: center;
+            color: green;
+        }
+        
+        .div4 {
+            position: relative;
+            top: 280px;
+            height: 600px;
+            width: 1521px;
+        }
+        
+        .img1 {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        .img2 {
+            position: absolute;
+            left: 760px;
+            top: 0;
+        }
+        
+        .p1 {
+            position: absolute;
+            left: 80px;
+            top: 500px;
+            text-align: center;
+            color: blue;
+            font-size: 25px;
+        }
+        
+        .p2 {
+            position: absolute;
+            left: 920px;
+            top: 500px;
+            text-align: center;
+            color: blue;
+            font-size: 25px;
+        }
+        
+        .div5 {
+            position: relative;
+            height: 40px;
+            width: 1521px;
+            top: 310px;
+            text-align: center;
+            color: black;
+        }
+        
+        .div6 {
+            position: relative;
+            height: 100px;
+            width: 1521px;
+            top: 330px;
+            left: 0;
+            text-align: center;
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!--页头区域-->
+    <div class="header_wrap">
+        <div class="header" id="header">
+            <div class="nav" id="nav">
+                <a class="logo">
+                    <h1>DFcous辰悦</h1>
+                </a>
+                <ul class="menu_list">
+
+                    <li class="menu_item">
+                        <a class="txt">简介</a>
+                        <ul class="sub_list">
+                            <li><a>公司介绍</a></li>
+                            <li><a>公司历程</a></li>
+                            <li><a>公司核心价值观</a></li>
+                            <li><a>辰悦科技领域</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="menu_item">
+                        <a class="txt">产品</a>
+                        <ul class="sub_list">
+                            <li><a>产品展示</a></li>
+                            <li><a>功能介绍</a></li>
+                            <li><a>创新特点</a></li>
+                            <li>
+                                <a></a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu_item">
+                        <a class="txt">团队</a>
+                        <ul class="sub_list">
+                            <li><a>人才培养</a></li>
+                            <li><a>集会活动</a></li>
+                            <li><a>团队成员</a></li>
+                            <li>
+                                <a></a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="menu_item">
+                        <a class="txt">未来规划</a>
+                        <ul class="sub_list">
+                            <li><a>个人规划</a></li>
+                            <li><a>辰悦计划</a></li>
+                            <li><a>新世界</a></li>
+                            <li>
+                                <a></a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu_item">
+                        <a class="txt">合作院校</a>
+                        <ul class="sub_list">
+                            <li><a target="_blank" href="https://www.tsinghua.edu.cn/">清华大学</a></li>
+                            <li><a target="_blank" href="https://www.pku.edu.cn/">北京大学</a></li>
+                            <li><a target="_blank" href="http://www.hebtu.edu.cn/">河北师范大学</a></li>
+                            <li><a target="_blank" href="http://software.hebtu.edu.cn/">河北师范大学软件学院</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <!-- 页头区域 -->
+
+
+    <div class="box">
+        <div class="div1">
+            <h1>成员组成</h1>
+        </div>
+        <div class="div2">
+            <ul class="grid cs-style-4">
+                <div class="row1">
+                    <li>
+                        <figure>
+                            <img src="images/dage.jpg" alt="img04">
+                            <figcaption>
+                                <h3>郝天恒</h3>
+                                <p>大哥，坑室友的朴实无华小盆友</p>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="images/laoer.jpg" alt="img04">
+                            <figcaption>
+                                <h3>徐良</h3>
+                                <p>江湖骗子，行走江湖多年</p>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="images/si.jpg" alt="img04">
+                            <figcaption>
+                                <h3>许一帆</h3>
+                                <p>美人、美食和美景不可辜负,但没有了你，又何谈诗与远方？<br>你是我的人间理想！
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </div>
+                <div class="row2">
+                    <li>
+                        <figure>
+                            <img src="images/liu.jpg" alt="img04">
+                            <figcaption>
+                                <h3>刘俊江</h3>
+                                <p>别问，问就是我亲姐刘亦菲</p>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="images/qi.jpg" alt="img04">
+                            <figcaption>
+                                <h3>蔡瑞祥</h3>
+                                <p>“究竟是什么使我如此贫穷”</p>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </div>
+            </ul>
+        </div>
+        <div class="div3">
+            <h1>成员活动</h1>
+        </div>
+        <div class="div4">
+            <div class="img1">
+                <img src="images/wangba.jpg">
+            </div>
+            <div class="img2">
+                <img src="images/ktv.jpg">
+            </div>
+            <div class="p1">
+                <p>没错，我们拥有众多环境优良的网吧用于聚众写代码</p>
+            </div>
+            <div class="p2">
+                <p>我们还会定期去k歌来释放压力(公司报销)</p>
+            </div>
+        </div>
+        <div class="div5">
+            <h1>加入我们</h1>
+        </div>
+        <div class="div6">
+            <h1>加入我们，体验不一样的生活吧！</h1>
+            <h2>邮箱：1257332619@qq.com</h2>
+            <h3>手机号码：15694887293</h3>
+        </div>
+    </div>
+
+    <!--页脚区域-->
+    <div class="footer_wrap">
+        <div class="footer_con">
+
+            <div class="banner">
+                <h3 class="tit">门户信息</h3>
+                <ul class="banner_list">
+                    <li>
+                        <a>
+                            <img src="images/QQ.png" alt="img">
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/wx.png" alt="img">
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/wb.png" alt="img">
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/ding.png" alt="img">
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="focus_us">
+                <div class="tit_area">
+                    <h3 class="tit">关注我们</h3>
+                    <i class="icon icon_arrow"></i>
+                </div>
+                <ul class="focus_list">
+                    <li>
+                        <a>公司简介</a>
+                    </li>
+                    <li>
+                        <a>产品推广</a>
+                    </li>
+                    <li>
+                        <a>未来规划</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="join_us">
+                <div class="tit_area">
+                    <h3 class="tit">加入我们</h3>
+                    <i class="icon icon_arrow"></i>
+                </div>
+                <ul class="join_list">
+                    <li>
+                        <a>社会招聘</a>
+                    </li>
+                    <li>
+                        <a>校园招聘</a>
+                    </li>
+                    <li>
+                        <a>网络招聘</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact_us">
+                <div class="tit_area">
+                    <h3 class="tit">联系我们</h3>
+                    <i class="icon icon_arrow"></i>
+                </div>
+                <ul class="contact_list">
+                    <li>
+                        <a>客户服务</a>
+                    </li>
+                    <li>
+                        <a>媒体及合作者</a>
+                    </li>
+                    <li>
+                        <a>河北师范大学</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer_area">
+                <ul class="links">
+                    <li><a>文化建设</a></li>
+                    <li><a>网站地图</a></li>
+                    <li><a>河北师范大学软件学院</a></li>
+                </ul>
+                <p class="copyright">Copyright © 2019 - 2119 DFcous. All Rights Reserved. 星辰之光 人间喜悦</p>
+            </div>
+
+        </div>
+    </div>
+    <!--页脚区域-->
+
+
+</body>
+
+</html>
