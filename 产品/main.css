@@ -1,6 +1,10 @@
 ul,ol,li,a{
     list-style: none;
 }
+a{
+    color: #000;
+}
+
 /*页头区域*/
 .header{
     width:100%;
