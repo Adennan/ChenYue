@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'ChenYueFont';
+    src: url('font/TencentSans-W3.woff');
+  }
 *{
     margin:0px;
     padding:0px;
@@ -212,10 +216,10 @@ i{
     opacity: 1;
 }
 .content_text .textbox1 .text{
-	margin-right: 72px;
+    margin-right: 72px;
 }
 .content_text .textbox1 .text{
-	margin-right: 72px;
+    margin-right: 72px;
 }
 .content_text .main_text p{
 	display: inline-block;
@@ -253,6 +257,7 @@ i{
     font-size: 24px;
     color: #e5eeeeb9;
     line-height: 90px;
+    font-family: "ChenYueFont";
 }
 .link ul{
     opacity: 1;
@@ -267,6 +272,7 @@ i{
     cursor:pointer;
     color: #e5eeeeb9; 
     opacity: 0.7;
+    font-family: "ChenYueFont";
 }
 .link #ul1 li:hover{
     display: inline-block;
