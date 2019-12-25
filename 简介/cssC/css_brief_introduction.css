@@ -1,0 +1,586 @@
+
+@font-face {
+    font-family: 'ChenYueFont';   /*字体名称*/
+    src: url('../fontC/ChenYue.woff');       /*字体源文件*/
+}
+@font-face {
+    font-family: 'JIA';   /*字体名称*/
+    src: url('../fontC/JIA.ttf'); /*字体源文件*/
+    }
+@font-face {
+    font-family: 'YUAN';   /*字体名称*/
+    src: url('../fontC/三极古圆简体.ttf'); /*字体源文件*/
+  }
+
+  ul,ol,li,a{
+    list-style: none;
+}
+/*页头区域*/
+.header{
+    width:100%;
+    height:72px;
+    display: block;
+    position: fixed;
+    top: 0px;
+    background-color: rgb(251, 251, 251);
+    z-index: 6;
+}
+.nav{
+    width: 1200px;
+    height:72px;
+    display: block;
+    margin:0px auto;
+    position: relative;
+    z-index:6;
+}
+.logo{
+    cursor:pointer;
+    text-align:center;
+    display: block;
+    height: 22px;
+    width: 200px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    font-family: "Microsoft YaHei";
+}
+.menu_list{
+    height:72px;
+    display: block;
+    position: fixed;
+    right:220px;
+    top:0px;
+    cursor:pointer;
+    opacity: 1;
+}
+.menu_list .menu_item{
+    height:72px;
+    display: inline-block;
+    margin-left: 72px;
+    position: relative;
+}
+.txt{
+    display: block;
+    height: 70px;
+    line-height: 72px;
+    font-size: 17px;
+    color: #2b2e2e;
+    font-weight: bold;
+    opacity: 0.95;
+    position: relative;
+    z-index: 6;
+}
+.sub_list{
+    display: none;
+    position: absolute;
+    left:50%;
+    width:160px;
+    margin-left: -80px;
+    text-align: center;
+    z-index: 6;
+    background:#fff;
+}
+.sub_list li a {
+    display: block;
+    font-size: 16px;
+    color: #2b2e2e;
+    opacity: 0.7;
+    padding: 13px 0;
+}
+.menu_list>li:hover .sub_list{
+    display: block;
+}
+.menu_list>li:hover .txt{
+    border-bottom: 2px solid rgb(47, 0, 255);
+}
+
+/*主体区域*/
+.main_wrap{
+    width:100%;
+    height:600px;
+    background-color:lightgoldenrodyellow;
+}
+.main_content{
+    width:1200px;
+    height:600px;
+    
+}
+
+/*页脚区域*/
+.footer_wrap{
+    width:100%;
+    height:480px;
+    background-color: rgb(251, 251, 251);
+    bottom:0px;
+    z-index: 1;
+}
+.footer_con{
+    width:1200px;
+    height:480px;
+    margin:0px auto;
+    position: relative;
+}
+.banner{
+    display: block;
+    width:100%;
+    height:55px;
+    border-bottom:1px solid #f2f3f5;
+    padding-top:33px;
+    margin-bottom: 40px;
+}
+.banner_list li{
+    display: inline-block;
+    margin-right: 28px;
+}
+.banner_list li a{
+    display: block;
+    height: 28px;
+    width: 28px;
+}
+.banner_list img{
+    border:0;
+    vertical-align: bottom;
+}
+.banner .tit{
+    float:left;
+    margin-right:33px;
+    display: block;
+    font-size: 20px;
+    color: #5f6464;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+.focus_us,.join_us,.contact_us{
+    float:left;
+    width:250px;
+}
+.footer_con .tit{
+    display: block;
+    font-size:20px;
+    color: #5f6464;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+i{
+    font-style:italic;
+}
+.footer_con ul li a{
+    display: block;
+    font-size: 16px;
+    color: #5f6464;
+    font-weight: normal;
+    margin-bottom: 18px;
+}
+.footer_area{
+    display: block;
+    width:100%;
+    position: absolute;
+    bottom:51px;
+    left:0px;
+}
+.footer_area .links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+.footer_area .links li a{
+    font-size: 14px;
+    color: #5f6464;
+    margin-bottom: 0px;
+}
+.copyright {
+    font-size: 14px;
+    color: #5f6464;
+    float: right;
+}
+
+
+.my_company{
+    padding-top: 130px;
+    padding-bottom: 350px;
+    font-size: 150px;
+    font-family: JIA;
+    color: white;
+    width: 100%;
+    letter-spacing: 0;
+    text-align: center;
+    position: relative;
+    top: -100px;
+    -webkit-transition: all 1.5s ease;
+            transition: all 1.5s ease;
+}
+
+.my_company:hover{
+    padding-top: 130px;
+    padding-bottom: 350px;
+    font-size: 150px;
+    font-family: JIA;
+    color: white;
+    width: 100%;
+    letter-spacing: 0;
+    text-align: center;
+    position: relative;
+    top: -100px;
+    -webkit-animation: Glow 1.5s ease infinite alternate;
+            animation: Glow 1.5s ease infinite alternate;
+}
+
+@-webkit-keyframes Glow {
+    from {
+        text-shadow: 0 0 10px #fff,
+                     0 0 20px #fff,
+                     0 0 30px #fff,
+                     0 0 40px #9400D3,
+                     0 0 70px #9400D3,
+                     0 0 80px #9400D3,
+                     0 0 100px #9400D3,
+                     0 0 150px #9400D3;
+    }
+    to {
+        text-shadow: 0 0 5px #fff,
+                     0 0 10px #fff,
+                     0 0 15px #fff,
+                     0 0 20px #9400D3,
+                     0 0 35px #9400D3,
+                     0 0 40px #9400D3,
+                     0 0 50px #9400D3,
+                     0 0 75px #9400D3;
+    }
+}
+@keyframes Glow {
+    from {
+        text-shadow: 0 0 10px #fff,
+                     0 0 20px #fff,
+                     0 0 30px #fff,
+                     0 0 40px #9400D3,
+                     0 0 70px #9400D3,
+                     0 0 80px #9400D3,
+                     0 0 100px #00FFFF,
+                     0 0 150px #00FFFF;
+    }
+    to {
+        text-shadow: 0 0 5px #fff,
+                     0 0 10px #fff,
+                     0 0 15px #fff,
+                     0 0 20px #9400D3,
+                     0 0 35px #9400D3,
+                     0 0 40px #9400D3,
+                     0 0 50px #00FFFF,
+                     0 0 75px #00FFFF;
+    }
+}
+
+.top_banner{
+    background-image: url(../imgC/company_banner00.jpg);
+    background-size: 1560px 800px;
+    background-position-y: 20px;
+    background-attachment: fixed;
+    height: 500px;
+    position: relative;
+    top: -50px;
+}
+.company_introduce_p1,.company_introduce_p2,.company_introduce_p3{
+text-align: center;
+font-size: 18px;
+}
+.company_introduce_p1{
+    font-size: 50px;
+    line-height: 20px;
+    color: darkgrey;
+}
+.company_introduce_p2{
+    font-size: 30px;
+    color: darkgrey;
+    position: relative;
+    top: 10px;
+}
+.introduce_detail{
+    height: 850px;
+    background: url(../imgC/company_face1.jpg) center no-repeat;
+    background-size: 1520px 1100px;
+}
+.shadow{
+    position: relative;
+    float: left;
+    left: 170px;
+    top: 30px;
+}
+.introduce-detail-p{
+    width: 1150px;
+    line-height: 32px;
+    font-family: JIA;
+    font-size: 20px;
+    color: white;
+    margin: 40px;
+}
+.introduce-detail-p1{
+    height: 80px;
+    margin: 100px;
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 50px;
+    line-height: 20px;
+    color: darkgrey;
+    border-bottom: 1px darkgrey solid;
+}
+.company_development{
+    height: 300px;
+    /* background: url(company_development.jpg) center no-repeat; */
+    background-size: 1520px 300px;
+}
+.company_development_video2{
+    background: url(../imgC/company_development2.jpg) center no-repeat;
+    width: 503px;
+    height: 282px;
+    position: relative;
+    top: 9px;
+    float: left;
+}
+.company_development_video0{
+    width: 500px;
+    height: 300px;
+    float: left;
+}
+.company_development_video0 video{
+    width: 500px;
+    height: 300px;
+    
+}
+.company_development_video1 video{
+    width: 500px;
+    height: 300px;
+}
+.company_development_video1{
+    width: 500px;
+    height: 300px;
+    float: left;
+}
+.company_development h2{
+    text-align: center;
+    font-size: 60px;
+    line-height: 60px;
+    padding-top: 60px;
+    color:#FFF;
+    opacity: 0.9;
+    letter-spacing:8px;
+    font-family: YUAN;
+    z-index: 6;
+    position: relative;
+    top: -260px;
+}
+.progress_bar{ 
+    width: 530px;
+    margin: auto; 
+    position: relative;
+    top: -250px;
+    left: -20px;
+    padding-top: 100px;
+    z-index: 6;
+}
+.progress_bar .node{ 
+    width:24px ;
+    height: 24px;  
+    float: left; 
+    position: relative; 
+    border-radius: 50%; 
+    background:rgba(255,255,255,0.5);
+    cursor: pointer;
+    left: 100px;
+}
+
+.progress_bar .node .txt{ 
+    position: absolute; 
+    color: white;
+    font-size: 24px; 
+    top: -60px; 
+    width: 200px; 
+    text-align: center; 
+    left: 50%;  
+    margin-left: -100px;
+    font-family: ChenYueFont;
+}
+.progress_bar .node .core{ 
+    width:18px; 
+    height: 18px; 
+    position: absolute; 
+    top:3px;  
+    left:3px;  
+    border-radius: 50%; 
+}
+.progress_bar .node.active .core{  
+    background: #fff;
+}
+.progress_bar .line{ 
+    position: relative;
+    left: 100px;
+    float: left; 
+    height: 2px;  
+    background:rgba(255,255,255,0.5); 
+    width:100px; 
+    margin-top: 11px;
+}
+.history-content{ 
+    height: 425px; 
+    width: 100%;
+    background: #FBFBFB ; 
+    color: #5F6464; 
+    overflow: hidden;
+    position: relative;
+    left: 10px;
+    top: -200px;
+}
+.en-us .history-content{
+  height: 620px;
+}
+.mod-con{
+    overflow: hidden;
+}
+.history-main{ 
+    left: 5px;
+    width: 10000px; 
+    overflow: hidden;
+    position: relative;
+}
+.history-main-box{ 
+    width: 380px; 
+    float: left; 
+    margin-right: 30px;
+}
+.history-title{ 
+    font-size: 24px; 
+    padding-top: 40px; 
+    line-height: 36px; 
+    font-family: 'TencentSansw7'; 
+    padding-bottom: 8px; 
+    border-bottom:1px solid #D8D9DC; 
+    margin-bottom: 18px;
+    color: #2A2E2E;
+}
+.history-main-box .li{ 
+    line-height: 25px; 
+    margin-bottom: 18px; 
+    font-size: 14px;
+}
+.history-main-box .li .left{ 
+    float: left; 
+    width: 40px; 
+    padding-right: 10px;  
+    text-align: right;
+} 
+.history-main-box .li .right{ 
+    width: 320px; 
+    float: left;
+}
+.mission {
+    height: 250px;
+    background-image: url(../imgC/company_core_values.jpg);
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    padding-top: 92px;
+    background-position-y: 0px;
+    background-attachment: fixed;
+    position: relative;
+    top: -100px;
+  }
+  
+  .mission .introduce-title {
+    font-size: 50px;
+    color: rgba(255,240,245,80%);
+    line-height: 50px;
+    text-align: center;
+    position: relative;
+    top: -80px;
+  }
+  .mission .introduce-p1,.mission .introduce-p2{
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+    position: relative;
+    top: -80px;
+  }
+  .mission .introduce-p1{
+    font-size: 30px;
+    opacity: 0.7;
+  }
+  .company_field{
+    position: relative;
+    top: -50px;
+    height: 1000px;
+    background-color: rgba(245,245,245,0.8);
+  }
+  .field_text_p1{
+    position: relative;
+    top: 50px;
+    text-align: center;
+    font-size: 50px;
+  }
+  .field_text_p2{
+    font-size: 20px;
+    color: slategray;
+    text-align: center;
+    position: relative;
+    top: 20px;
+  }
+  .company_field_technology1{
+      position: relative;
+      top: 100px;
+      left: 80px;
+  }
+  .company_field_technology2{
+      position: relative;
+      top: 50px;
+  }
+  .company_field_technology1 div,.company_field_technology2 div{
+      float: left;
+      height: 300px;
+  } 
+  .company_technology1{
+      width: 850px;
+      margin-right: 50px;
+      border-radius: 15px;
+  }
+  .company_technology2,.company_technology3,.company_technology4,.company_technology5{
+      margin-right: 50px;
+      width: 400px;
+      border-radius: 15px;
+  }
+   .company_technology1:hover ,.company_technology2:hover,.company_technology3:hover,.company_technology4:hover,.company_technology5:hover{
+    background-color: royalblue;
+  } 
+  .company_technology1 img{
+      height: 300px;
+      width: 850px;
+      margin-right: 50px;
+      position: relative;
+      top: 0px;
+      border-radius: 15px;
+  }
+  
+  .company_technology2 img,.company_technology3 img,.company_technology4 img,.company_technology5 img{
+    border-radius: 15px;
+    height: 300px;
+    width: 400px;
+    margin-right: 50px;
+    position: relative;
+    top: 0px;
+}
+.company_technology_text{
+    float: left;
+}
+.technology_text{
+    position: relative;
+    top: -270px;
+    left: -35px;
+    font-size: 30px;
+    opacity: 0;
+    text-align: center;
+    color: white;
+}
+.content{
+    width:100%;
+    display:fixed;
+    height:100%;
+    overflow-y:hidden;
+    overflow-x:hidden;
+    }
+
