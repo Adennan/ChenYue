@@ -1,0 +1,342 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>员工</title>
+        <script src="js/modernizr.custom.js"></script>
+		
+
+<style type="text/css" >
+    
+/* 通用样式 */
+
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+body, html { font-size: 100%; padding: 0; margin: 0;}
+body {
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	color: #b3b9bf;
+	background: #f9f9f9;
+}
+a {
+	color: #888;
+	text-decoration: none;
+}
+a:hover, a:active {
+	color: #333;
+}
+
+.grid {
+	padding: 20px 20px 100px 20px;
+	max-width: 1300px;
+	margin: 0 auto;
+	list-style: none;
+	text-align: center;
+}
+
+.grid li {
+	display: inline-block;
+	width: 440px;
+	margin: 0;
+	padding: 20px;
+	text-align: left;
+	position: relative;
+}
+
+.grid figure {
+	margin: 0;
+	position: relative;
+}
+
+.grid figure img {
+	max-width: 100%;
+	display: block;
+	position: relative;
+}
+
+.grid figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20px;
+	background: #2c3f52;
+	color: #ed4e6e;
+}
+
+.grid figcaption h3 {
+	margin: 0;
+	padding: 0;
+	color: #fff;
+}
+
+.grid figcaption span:before {
+	content: 'by ';
+}
+
+.grid figcaption a {
+	text-align: center;
+	padding: 5px 10px;
+	border-radius: 2px;
+	display: inline-block;
+	background: #ed4e6e;
+	color: #fff;
+}
+   
+/* 说明文字样式 4 */
+
+.cs-style-4 li {
+	-webkit-perspective: 1700px;//webkit和moz都是为了兼容老版本
+	-moz-perspective: 1700px;//perspective 属性定义 3D 元素距视图的距离，以像素计。该属性允许您改变 3D 元素查看 3D 元素的视图。
+//当为元素定义 perspective 属性时，其子元素会获得透视效果，而不是元素本身。
+//注释：perspective 属性只影响 3D 转换元素。
+//提示：请与 perspective-origin 属性一同使用该属性，这样您就能够改变 3D 元素的底部位置。
+	perspective: 1700px;
+	-webkit-perspective-origin: 0 50%;
+	-moz-perspective-origin: 0 50%;
+	perspective-origin: 0 50%;
+}
+
+.cs-style-4 figure {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;//表示所有子元素在3D空间中呈现。（transform--style属性指定嵌套元素是怎样在三维空间中呈现）
+}
+
+/* .cs-style-4 figure > div {
+	overflow: hidden;
+} */
+//隐藏div，然并卵
+
+.cs-style-4 figure img {
+	//transition: 规定设置过渡效果的 CSS 属性的名称，规定完成过渡效果需要多少秒或毫秒， 规定速度
+	-webkit-transition: -webkit-transform 0.4s;
+	-moz-transition: -moz-transform 0.4s;
+	transition: transform 0.4s;
+}
+
+.no-touch .cs-style-4 figure:hover img,
+.cs-style-4 figure.cs-hover img {
+	-webkit-transform: translateX(25%);
+	-moz-transform: translateX(25%);
+	-ms-transform: translateX(25%);
+	transform: translateX(25%);
+}
+
+.cs-style-4 figcaption {
+	height: 100%;
+	width: 50%;
+	opacity: 0;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	transform-origin: 0 0;
+	-webkit-transform: rotateY(-90deg);
+	-moz-transform: rotateY(-90deg);
+	transform: rotateY(-90deg);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+	transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+
+.no-touch .cs-style-4 figure:hover figcaption,
+.cs-style-4 figure.cs-hover figcaption {
+	opacity: 1;
+	-webkit-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s;
+	transition: transform 0.4s, opacity 0.1s;
+}
+
+.cs-style-4 figcaption a {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+}
+.box{
+	position: relative;
+	width: 1521px;
+	height: 2300px;
+}
+.div1{
+	position: absolute;
+	width: 1521px;
+	height: 20px;
+	top: 100px;
+	text-align: center;
+	color: green;
+}
+.div2{
+	position: relative;
+	width: 1521px;
+	height: 900px;
+	top: 180px;
+	background-image: url('images/heidong.jpg');
+	background-size: 100% 100%;
+	left: 0;
+}
+.row1{
+	position: absolute;
+	width: 1521px;
+	height: 400px;
+	top: 100px;
+	left: 0;
+}
+.row2{
+	position: absolute;
+	width: 1521px;
+	height: 400px;
+	top: 500px;
+	left: 0;
+}
+.div3{
+	position: absolute;
+	top: 1100px;
+	height: 40px;
+	width: 1521px;
+	text-align: center;
+	color: green;
+}
+.div4{
+	position: relative;
+	top: 320px;
+	height: 600px;
+	width: 1521px;
+}
+.img1{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.img2{
+	position: absolute;
+	left: 760px;
+	top: 0;
+}
+.p1{
+	position: absolute;
+	left: 50px;
+	top: 500px;
+	text-align: center;
+	color: blue;
+	font-size: 25px;
+}
+.p2{
+	position: absolute;
+	left: 800px;
+	top: 500px;
+	text-align: center;
+	color: blue;
+	font-size: 25px;
+}
+.div5{
+	position: relative;
+	height: 40px;
+	width: 1521px;
+	top: 350px;
+	text-align: center;
+	color: black;
+}
+.div6{
+	position: relative;
+	height: 100px;
+	width: 1521px;
+	top: 400px;
+	left: 0;
+	text-align: center;
+	color: red;
+}
+</style>
+		
+	</head>
+	<body>
+	<div class="box">
+			<div class="div1">
+			    <h1>成员组成</h1>
+			</div>
+		<div class="div2">
+			<ul class="grid cs-style-4">
+			<div class="row1">
+				<li>
+					<figure>
+						<img src="images/dage.jpg" alt="img04">
+						<figcaption>
+							<h3>郝天恒</h3>
+							<p>大哥，坑室友的朴实无华小盆友</p>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="images/laoer.jpg" alt="img04">
+						<figcaption>
+							<h3>徐良</h3>
+							<p>江湖骗子，行走江湖多年</p>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="images/si.jpg" alt="img04">
+						<figcaption>
+							<h3>许一帆</h3>
+							<p>天生我八尺男儿，岂能无作无为？
+世界格局的不断提升，人生三观的正确建立，引领前进
+过硬本领的不锻炼就，家国情怀的血性男儿，当谓之如我！
+最后永远不会忘记，你是我的人间理想！</p>
+						</figcaption>
+					</figure>
+				</li>
+			</div>
+			<div class="row2">
+				<li>
+					<figure>
+						<img src="images/liu.jpg" alt="img04">
+						<figcaption>
+							<h3>刘俊江</h3>
+							<p>“或许分手太多，使我更冷漠。”</p>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="images/qi.jpg" alt="img04">
+						<figcaption>
+							<h3>蔡瑞祥</h3>
+							<p>“究竟是什么使我如此贫穷”</p>
+						</figcaption>
+					</figure>
+				</li>
+			</div>
+			</ul>
+			</div>
+		<div class="div3">
+			<h1>成员活动</h1>
+		</div>
+		<div class="div4">
+			<div class="img1">
+				<img src="images/wangba.jpg">
+			</div>
+			<div class="img2">
+				<img src="images/ktv.jpg">
+			</div>
+			<div class="p1">
+				<p>没错，我们拥有众多环境优良的网吧用于聚众写代码</p>
+			</div>
+			<div class="p2">
+				<p>我们还会定期去k歌来释放压力，(公司报销)</p>
+			</div>
+		</div>
+		<div class="div5"><h1>加入我们</h1></div>
+		<div class="div6">
+			<h1>加入我们，体验不一样的生活吧！</h1>
+			<h2>邮箱：1257332619@qq.com</h2>
+			<h3>手机号码：15694887293</h3>
+		</div>
+	</div>
+	</body>
+</html>
